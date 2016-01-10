@@ -31,16 +31,4 @@ void count_vowels_and_consonants(char *str,int *consonants, int *vowels){
 			else
 				*consonants += 1;
 	}
-	/*int i = 0;
-	while (str != NULL)
-	{
-		if ((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122))
-		{
-			if (*str == 'a' || *str == 'A' || *str == 'e' || *str == 'E' || *str == 'i' || *str == 'I' || *str == 'o' || *str == 'O' || *str == 'u' || *str == 'U')
-				*vowels += 1;
-			else
-				*consonants += 1;
-		}
-		str++;
-	}*/
 }
