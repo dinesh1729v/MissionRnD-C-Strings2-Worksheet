@@ -32,6 +32,24 @@ int count_word_in_str_way_1(char *str, char *word){
 }
 
 int count_word_int_str_way_2_recursion(char *str, char *word){
+	if (*str == NULL || *word == NULL)	return 0;
+	int i, flag = 1;
+	for (i = 0; word[i] != '\0'; i++)
+	{
+		if ((str[i] != word[i]) || (str[i] == '\0'))
+		{
+			flag = 0; break;
+		}
+	}
+	return flag + count_word_int_str_way_2_recursion(str + 1, word);
+
+	return count_word_int_str_way_2_recursion(str, word);
+}
+
+/*
+	The below code works for individual test cases...It will not work for all the test cases in the single program due to the usage of 
+	static integer...
+	
 	static int cnt = 0;
 	if (str[0] != '\0')
 		count_word_int_str_way_2_recursion(str + 1, word);
@@ -45,4 +63,6 @@ int count_word_int_str_way_2_recursion(char *str, char *word){
 	}
 	cnt += flag;
 	return cnt;
-}
+
+
+*/
