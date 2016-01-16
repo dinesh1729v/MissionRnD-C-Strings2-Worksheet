@@ -33,7 +33,7 @@ int count_word_in_str_way_1(char *str, char *word){
 
 int count_word_int_str_way_2_recursion(char *str, char *word){
 	static int cnt = 0;
-	if (str[0] == '\0')
+	if (str[0] != '\0')
 		count_word_int_str_way_2_recursion(str + 1, word);
 	int flag = 1, j;
 	for (j = 0; word[j] != '\0'; j++)
