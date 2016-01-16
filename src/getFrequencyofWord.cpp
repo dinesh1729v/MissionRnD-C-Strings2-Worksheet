@@ -42,13 +42,12 @@ int count_word_int_str_way_2_recursion(char *str, char *word){
 		}
 	}
 	return flag + count_word_int_str_way_2_recursion(str + 1, word);
-
-	return count_word_int_str_way_2_recursion(str, word);
 }
 
 /*
-	The below code works for individual test cases...It will not work for all the test cases in the single program due to the usage of 
-	static integer...
+	The below code works only if one test case is given in one program...It will not work if all the test cases are given in the single program 
+	due to the usage of static int(since it will not change through out the program, the value of cnt in previous test case will be continued to 
+	next test case.)...
 	
 	static int cnt = 0;
 	if (str[0] != '\0')
